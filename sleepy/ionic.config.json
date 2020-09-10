@@ -1,0 +1,7 @@
+{
+  "name": "sleepy",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}
