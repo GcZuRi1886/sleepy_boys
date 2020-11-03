@@ -1,36 +1,17 @@
-<ion-header [translucent]="true">
-  <ion-toolbar>
-    <ion-title>
-      Sleepy
-    </ion-title>
-  </ion-toolbar>
-</ion-header>
-
-<ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">Sleepy</ion-title>
-    </ion-toolbar>
-  </ion-header>
-
-      <ion-card *ngFor="let number of [1,2,3,4,5,6,7]">
-        <ion-card-header>
-          <ion-title>
-          Titel {{number}}
-            <ion-icon id="{{number}}" (click)="cardAction(number)" name="chevron-down">
-            </ion-icon>
-          </ion-title>
-        </ion-card-header>
-        <ion-card-content *ngIf="checkIfOpen(number)===true">
-          Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et
-          dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet
-          clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet,
-          consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat,
-          sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea
-          takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed
-          diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et
-          accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum
-          dolor sit amet.
-        </ion-card-content>
-      </ion-card>
+<div style="padding-top: 150px"></div>
+<ion-content>
+    <ion-grid>
+        <ion-row>
+        <ion-col>
+            <ion-title class="home-text" color="primary">Was ist der Sleeper Effekt?</ion-title><br>
+            <ion-title class="home-text"  color="primary">Wie funktioniert Sleeper Effekt? </ion-title><br>
+            <ion-title class="home-text"  color="primary">Welche Folgen hat der Sleeper Effekt?</ion-title><br>
+            <ion-title class="home-text"  color="primary">Wiese gibt es den Sleeper Effekt?</ion-title><br>
+            <ion-button color="primary">Hier Erfahren</ion-button>
+        </ion-col>
+                <ion-col>
+                    <img src="assets/svg/undraw_Questions_re_1fy7.svg" alt="Kiwi standing on oval">
+                </ion-col>
+            </ion-row>
+    </ion-grid>
 </ion-content>
