@@ -21,6 +21,20 @@
   padding-top: 330px;
   z-index: -1;
 }
+
+.secondWaveWrapper {
+  overflow: hidden;
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  top: 0;
+  margin: auto;
+  background-color: #1c7bca;
+  padding-top: 100px;
+  z-index: -1;
+}
+
 .waveWrapperInner {
   position: absolute;
   width: 100%;
@@ -50,6 +64,7 @@
 }
 .waveTop {
   background-size: 50% 100px;
+  background-image: url("../assets/waves_top/wave-top.png");
 }
 .waveAnimation .waveTop {
   animation: move-wave 3s;
@@ -59,12 +74,14 @@
 }
 .waveMiddle {
   background-size: 50% 120px;
+  background-image: url("../assets/waves_top/wave-mid.png");
 }
 .waveAnimation .waveMiddle {
   animation: move_wave 10s linear infinite;
 }
 .waveBottom {
   background-size: 50% 100px;
+  background-image: url("../assets/waves_top/wave-bot.png");
 }
 .waveAnimation .waveBottom {
   animation: move_wave 15s linear infinite;
@@ -104,6 +121,36 @@ ion-header {
 
 ion-content{
   margin-top: 500px;
+}
+
+.wrapperb {
+  width: 100%;
+  height: 100px;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  border-radius: 5px;
+  background-image: linear-gradient(to top, #accbee 0%, #e7f0fd 100%);
+  overflow: hidden;
+}
+
+.waveb {
+  width: 1000px;
+  height: 1025px;
+  position: absolute;
+  top: -25%;
+  left: 50%;
+  margin-left: -500px;
+  margin-top: -500px;
+  border-radius: 35%;
+  background: rgba(255, 255, 255, .75);
+  animation: waveb 15s infinite linear;
+}
+
+@keyframes waveb {
+  from { transform: rotate(0deg);}
+  from { transform: rotate(360deg);}
 }
 
 
