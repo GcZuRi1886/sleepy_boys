@@ -7,9 +7,17 @@ import { Component, OnInit } from '@angular/core';
 })
 export class CreatorsPage implements OnInit {
 
-  constructor() { }
+  selectedValue: 'einleitung' | 'geschichte';
+
+  constructor() {
+    this.selectedValue = null;
+  }
 
   ngOnInit() {
+  }
+
+  changeSelectedValue(value: any){
+      this.selectedValue = value;
   }
 
 }

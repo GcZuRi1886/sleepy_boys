@@ -1,9 +1,49 @@
-<ion-header>
-  <ion-toolbar>
-    <ion-title>subjects</ion-title>
-  </ion-toolbar>
-</ion-header>
-
+<div style="padding-top: 250px"></div>
 <ion-content>
+  <ion-grid>
+    <ion-row>
+      <ion-col>
+        <ion-card (click)="changeSelectedValue('einleitung')">
+          <ion-card-title>Einleitung</ion-card-title>
+          <ion-card-content *ngIf="selectedValue==='einleitung'">
+            Wieso nennt es sich Sleeper Effect?
+            Der Sleeper Effect hat nicht so wie es der Begriff scheinen lässt, etwas mit schlafen zu tun, sondern mit einer Einstellungsänderung über eine längere Zeitspanne.
 
+            Was ist Sleeper-Effect?
+            Der Sleeper Effect bezieht sich auf das Verändern oder Vergessen der Gefühlseinstellung, bezüglich der Quelle oder Senders der Informationen. Man vergisst die Glaubwürdigkeit oder Unglaubwüdikeit des Senders und validiert die erhaltene Information über Zeit neu. So kann es sein, dass die ehemals negative Wirkung des Informationssender vergessen geht, jedoch die Erinnerung an den Inhalt bleibt, welcher je länger es her ist, umso glaubwürdiger wirkt.
+
+            Damit der Sleeper Effect zustande kommen kann, müssen deshalb folgende Randbedingungen herrschen:
+          </ion-card-content>
+        </ion-card>
+      </ion-col>
+      <ion-col>
+        <ion-card (click)="changeSelectedValue('geschichte')">
+          <ion-card-title>Geschichte</ion-card-title>
+          <ion-card-content *ngIf="selectedValue==='geschichte'">
+            Wieso nennt es sich Sleeper Effect?
+            Der Sleeper Effect hat nicht so wie es der Begriff scheinen lässt, etwas mit schlafen zu tun, sondern mit einer Einstellungsänderung über eine längere Zeitspanne.
+
+            Was ist Sleeper-Effect?
+            Der Sleeper Effect bezieht sich auf das Verändern oder Vergessen der Gefühlseinstellung, bezüglich der Quelle oder Senders der Informationen. Man vergisst die Glaubwürdigkeit oder Unglaubwüdikeit des Senders und validiert die erhaltene Information über Zeit neu. So kann es sein, dass die ehemals negative Wirkung des Informationssender vergessen geht, jedoch die Erinnerung an den Inhalt bleibt, welcher je länger es her ist, umso glaubwürdiger wirkt.
+
+            Damit der Sleeper Effect zustande kommen kann, müssen deshalb folgende Randbedingungen herrschen:
+          </ion-card-content>
+        </ion-card>
+      </ion-col>
+      <ion-col>
+        <ion-card (click)="changeSelectedValue('beispiel')">
+          <ion-card-title>Beispiele</ion-card-title>
+          <ion-card-content *ngIf="selectedValue==='beispiel'">
+            Wieso nennt es sich Sleeper Effect?
+            Der Sleeper Effect hat nicht so wie es der Begriff scheinen lässt, etwas mit schlafen zu tun, sondern mit einer Einstellungsänderung über eine längere Zeitspanne.
+
+            Was ist Sleeper-Effect?
+            Der Sleeper Effect bezieht sich auf das Verändern oder Vergessen der Gefühlseinstellung, bezüglich der Quelle oder Senders der Informationen. Man vergisst die Glaubwürdigkeit oder Unglaubwüdikeit des Senders und validiert die erhaltene Information über Zeit neu. So kann es sein, dass die ehemals negative Wirkung des Informationssender vergessen geht, jedoch die Erinnerung an den Inhalt bleibt, welcher je länger es her ist, umso glaubwürdiger wirkt.
+
+            Damit der Sleeper Effect zustande kommen kann, müssen deshalb folgende Randbedingungen herrschen:
+          </ion-card-content>
+        </ion-card>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
 </ion-content>

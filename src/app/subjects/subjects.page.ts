@@ -7,9 +7,24 @@ import { Component, OnInit } from '@angular/core';
 })
 export class SubjectsPage implements OnInit {
 
-  constructor() { }
+  selectedValue: 'einleitung' | 'geschichte' | 'beispiel';
+
+  oldValue: any;
+
+  constructor() {
+    this.selectedValue = null;
+  }
 
   ngOnInit() {
   }
 
+  changeSelectedValue(value: any){
+    if(this.oldValue!==value){
+      this.selectedValue = value;
+      this.oldValue = value;
+    }else{
+      this.selectedValue = null;
+      this.oldValue = null;
+    }
+  }
 }
