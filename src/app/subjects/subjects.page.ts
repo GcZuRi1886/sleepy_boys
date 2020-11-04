@@ -7,7 +7,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class SubjectsPage implements OnInit {
 
-  selectedValue: 'einleitung' | 'geschichte' | 'beispiel';
+  selectedValue: 'einleitung' | 'geschichte' | 'beispiel' | 'PdM';
 
   oldValue: any;
 
