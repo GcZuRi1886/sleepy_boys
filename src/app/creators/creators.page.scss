@@ -1,12 +1,46 @@
-ion-avatar {
-  width: 100px;
-  height: 100px;
+ion-card{
+  max-width: 90%;
+}
+
+ion-card-header{
+  padding-left: 0%;
+  padding-right: 0%;
+  padding-top: 0%;
+  margin: 0%;
+  width: 100%;
+  height: 100%;
 }
 
 .card-img{
   width: 100%;
+  height: 100%;
+  padding: 0%;
+  margin: 0%;
 }
 
-ion-card-header{
-  padding: 0;
+ion-card:hover{
+  min-width: 100%;
+  transition: all 250ms linear;
+  box-shadow: 10px 10px 10px rgba(#000000, .4);
+  ion-card-header{
+    //padding: 0%;
+    //margin: 0%;
+    width: 100%;
+    height: 100%;
+  }
+}
+
+ion-card-title{
+    color: white;
+    margin-left: 10px;
+}
+
+ion-title {
+    padding-top: 5px;
+    color: white;
+}
+
+ion-col {
+  padding-left: 20px;
+  padding-right: 20px;
 }
