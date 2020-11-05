@@ -1,12 +1,21 @@
 .home-text{
   font-family: Arial, serif;
+  font-weight: bold;
   font-size: 3.5em;
   padding-top: 10%;
+  color: #1c7bca;
 }
 
-.home-svg{
-
+img{
+  min-width: 600px;
+  margin-top: 20%;
 }
 
-ion-content{
+ion-button{
+  --width: 85px;
+  --padding-bottom: 40px;
+  --padding-top: 40px;
+  font-family: Arial, serif;
+  font-weight: bold;
+  font-size: 2.5em;
 }
