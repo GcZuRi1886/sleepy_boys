@@ -1,46 +1,224 @@
-<div style="padding-top: 250px"></div>
+<div style="padding-top: 300px"></div>
 <ion-content>
   <ion-grid>
     <ion-row>
-      <ion-col>
-        <ion-card (click)="changeSelectedValue('einleitung')">
-          <ion-card-title>Einleitung</ion-card-title>
-          <ion-card-content *ngIf="selectedValue==='einleitung'">
-            Wieso nennt es sich Sleeper Effect?
-            Der Sleeper Effect hat nicht so wie es der Begriff scheinen lässt, etwas mit schlafen zu tun, sondern mit einer Einstellungsänderung über eine längere Zeitspanne.
-
-            Was ist Sleeper-Effect?
-            Der Sleeper Effect bezieht sich auf das Verändern oder Vergessen der Gefühlseinstellung, bezüglich der Quelle oder Senders der Informationen. Man vergisst die Glaubwürdigkeit oder Unglaubwüdikeit des Senders und validiert die erhaltene Information über Zeit neu. So kann es sein, dass die ehemals negative Wirkung des Informationssender vergessen geht, jedoch die Erinnerung an den Inhalt bleibt, welcher je länger es her ist, umso glaubwürdiger wirkt.
-
-            Damit der Sleeper Effect zustande kommen kann, müssen deshalb folgende Randbedingungen herrschen:
+      <ion-col [size]="platform.width()>620?(selectedValue==='about'?12:6):12">
+        <ion-card (click)="changeSelectedValue('about')">
+          <ion-card-title>Sleeper-Effect?</ion-card-title>
+          <ion-card-content *ngIf="selectedValue==='about'">
+              <ion-grid>
+                <ion-row>
+                  <ion-col>
+                    <ion-text>
+                    <h1>Was ist Sleeper-Effect?</h1>
+                    Der Sleeper Effect bezieht sich auf das Verändern oder Vergessen der Gefühlseinstellung, bezüglich der Quelle oder Senders der Informationen.
+                      <br><br>
+                      Man vergisst die Glaubwürdigkeit oder Unglaubwüdikeit des Senders und validiert die erhaltene Information über Zeit neu.
+                      <br><br>
+                      So kann es sein, dass die ehemals negative Wirkung des Informationssender vergessen geht, jedoch die Erinnerung an den Inhalt bleibt, welcher je länger es her ist, umso glaubwürdiger wirkt.
+                    </ion-text><br>
+                  </ion-col>
+                  <ion-col>
+                    <img src="assets/svg/undraw_searching_p5ux.svg" alt="searching">
+                  </ion-col>
+                  <ion-col>
+                    <ion-text>
+                    <h1>Randbedingungen für Sleeper Effect:</h1>
+                    <ul>
+                      <li>Der Informationsinhalt muss überzeugend sein</li><br>
+                      <li>Der Sender muss Glaubwürdigkeit besitzen</li><br>
+                      <li>Der ehemals erhaltene Inhalt musst sitzen bleiben</li><br>
+                      <li>Es braucht Zeit</li>
+                    </ul>
+                    </ion-text>
+                  </ion-col>
+                </ion-row>
+              </ion-grid>
           </ion-card-content>
         </ion-card>
       </ion-col>
-      <ion-col>
-        <ion-card (click)="changeSelectedValue('geschichte')">
+      <ion-col [size]="platform.width()>620?(selectedValue==='entdeckung'?12:6):12">
+        <ion-card (click)="changeSelectedValue('entdeckung')">
+          <ion-card-title>Entdeckung</ion-card-title>
+          <ion-card-content *ngIf="selectedValue==='entdeckung'">
+            <ion-text>
+              <ion-grid>
+                <ion-row>
+                  <ion-col>
+                    <img src="assets/svg/undraw_alien_science_nonm.svg" alt="alien and researcher">
+                  </ion-col>
+                  <ion-col>
+            <h1>Entdeckung des Sleeper Effects</h1>
+            Dem Sleeper Effect wurde zum ersten Mal im 2. Weltkrieg nachgegangen. Carl Hovland und Walther Weiss wollten 1949 in folge des Yale attitude change approach untersuchen, unter welchen Bedingungen die Menschen am wahrscheinlichsten, als Reaktion auf eine überzeugende Informationserhalt  ihre Einstellung ändern.<br><br>
+            Der Sleeper Effect wurde damals innerhalb eines  Experiment untersucht, bei dem überprüft wurde, ob sich die Einstellungen amerikanischer Soldaten gegenüber der Luftschlacht um England durch die Rezeption des Propagandafilms „The War of Britain“ beeinflussen ließen.<br><br>
+            Es wurden dazu zehn Kompanien in vier Gruppen eingeteilt. Zwei davon wurden dem Propagandafilm ausgesetzt. Eine Gruppe wurde nach drei Wochen mit einem Fragebogen über die Einstellung zur Luftschlacht befragt, während die andere der zwei Testgruppen nach elf Wochen befragt wurde.<br><br>
+            Es stellte sich tatsächlich heraus, dass die Testgruppe die als letztes befragt wurde, sich am meisten der Argumentationslinie des Films angenähert hatten.
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+            </ion-text>
+          </ion-card-content>
+        </ion-card>
+      </ion-col>
+      <ion-col [size]="platform.width()>620?(selectedValue==='G'?12:6):12">
+        <ion-card (click)="changeSelectedValue('G')">
           <ion-card-title>Geschichte</ion-card-title>
-          <ion-card-content *ngIf="selectedValue==='geschichte'">
-            Wieso nennt es sich Sleeper Effect?
-            Der Sleeper Effect hat nicht so wie es der Begriff scheinen lässt, etwas mit schlafen zu tun, sondern mit einer Einstellungsänderung über eine längere Zeitspanne.
-
-            Was ist Sleeper-Effect?
-            Der Sleeper Effect bezieht sich auf das Verändern oder Vergessen der Gefühlseinstellung, bezüglich der Quelle oder Senders der Informationen. Man vergisst die Glaubwürdigkeit oder Unglaubwüdikeit des Senders und validiert die erhaltene Information über Zeit neu. So kann es sein, dass die ehemals negative Wirkung des Informationssender vergessen geht, jedoch die Erinnerung an den Inhalt bleibt, welcher je länger es her ist, umso glaubwürdiger wirkt.
-
-            Damit der Sleeper Effect zustande kommen kann, müssen deshalb folgende Randbedingungen herrschen:
+          <ion-card-content *ngIf="selectedValue==='G'">
+            <ion-text>
+            <ion-grid>
+              <ion-row>
+                <ion-col>
+            <h1>Der Forgetting-Effekt</h1>
+            Dieses Phänomen wurde 1949 zunächst durch das Forgetting-Modell erklärt. Es wurde angenommen dass die Testgruppen die Erinnerungen an die Quelle der Informationen ( Propagandafilm ) verblasst und nur noch der Inhalt/ Kernaussagen der Quelle im Gedächtnis geblieben sind.
+            Dies wurde aber 1951 widerlegt, da sich die Testpersonen sehr wohl noch an die Quelle der überzeugenden Aussagen erinnern konnten.
+                </ion-col>
+              </ion-row>
+                  <ion-row>
+                    <ion-col>
+            “In the present analysis the critical requirement is a decreased tendency over time to reject the material presented by an untrustworthy source. This may or may not require that the source be forgotten. But the individual must be less likely with the passage of time to associate spontaneously the content with the source. Thus, the passage of time serves to remove recall of the source as a mediating cue that leads to rejection.”
+            (Hovland, Carl I., and Walter Weiss. “The Influence of Source Credibility on Communication Effectiveness.” 1951, S. 648)
+                </ion-col>
+                  </ion-row>
+                  <ion-row>
+                <ion-col>
+                  <h1>Wirkungsweise des Dissociation Models nach Hovland & Weiss 1951</h1>
+                  <img style="margin-left: auto;margin-right: auto;display: block;" class="diagram" src="assets/abbildung/abbildung_uno.png" alt="">
+                </ion-col>
+              </ion-row>
+              <ion-row>
+                <ion-col>
+                  <img class="diagram" src="assets/abbildung/abbildung_dos.png" alt="">
+                </ion-col>
+                <ion-col>
+                  <h1>Weitere Studien über die Assoziation mit der Discounting Cue</h1>
+                  Überprüfung, ob es den Sleeper-Effekt gibt oder, ob es sich um den Forgetting-Effekt handelt.
+                  <br><br>
+                  <h2>Resultat: Es findet ein Sleeper-Effekt statt.</h2>
+                  <br><br>
+                  Untersuchung der Assoziation des Discount-Cues mit der Einstellungsänderung.
+                  <br><br>
+                  Glaubwürdige Quelle vs. Unglaubwürdige
+                  <br><br>
+                  Unglaubwürdige Quelle vs.
+                  neutrale/ keine Quelle
+                  <br><br>
+                  <h2>Resultat Hovland & Weiss, 1951 :</h2>
+                  Unglaubwürdige Quelle (Discount Cue):
+                  <br><br>
+                  Leichte Einstellungsveränderungs in Richtung des Botschaftsinhalts,
+                  Glaubwürdige Quelle:
+                  Leichte Einstellungsveränderung in Gegenrichtung des Botschafts Inhalts.
+                  Bestätigt also somit den Sleeper-Effect
+                </ion-col>
+              </ion-row>
+              <ion-row>
+                <ion-col>
+                  <img style="margin-left: auto;margin-right: auto;display: block;" class="diagram" src="assets/abbildung/abbildung_tres.png" alt="">
+                </ion-col>
+              </ion-row>
+              <ion-row>
+                <ion-col>
+                  <h2>Resultat Weiss 1953:</h2>
+                  Unglaubwürdige Quelle (Discount Cue):
+                  Leichte Einstellungsveränderung in Gegenrichtung des Botschafts Inhalts.
+                  <br>
+                  Keine / Neutrale Quelle:
+                  Grosse Einstellungsveränderung in Gegenrichtung des Botschafts Inhalts.
+                  <br>
+                  <h2>Obwohl die Resultate der Discounting-Cue Gruppe nicht wie erwartet waren, zeigt es trotzdem eine weniger starke Einstellungsveränderung in Gegenrichtung des Inhalts im Vergleich zur keine Quelle Gruppe.
+                    Weiss sah dies auch als Bestätigung des Sleeper-Effects</h2>
+                  <br><br>
+                  In den weiteren paar Jahren (1950 - 1970 ) wurden weitere Studien durchgeführt, die zudem den Sleeper Effect bestätigten. Der einzige Widerspruch zur Definition des Sleeper Effects von Hovland & Weiss  war, dass die gemessenen Einstellungsänderungen im Zeitverlauf wieder abnahmen.
+                </ion-col>
+                <ion-row>
+                  <ion-col>
+                    <h2>Das Differential Decay Model</h2>
+                    Um 1986 gab es noch eine weitere wichtige Studie für die Theorieentwicklung des Sleeper Effects wurde von Greenwald und Pratkanis durchgeführt. Sie hielten eine Reihe von Studien, in welchen entweder vor oder nach der “persuasive Botschaft” die Discounting cue preisgegeben wurde.
+                    <br>
+                    Das Resultat ergab, dass das Timing der Discounting cue essentiell ist um einen Sleeper Effekt zu erzeugen.
+                  </ion-col>
+                  <ion-col>
+                    <img style="margin-left: auto;margin-right: auto;display: block;" class="diagram" src="assets/abbildung/abbildung_quatro.png" alt="">
+                  </ion-col>
+                </ion-row>
+              </ion-row>
+            </ion-grid>
+            </ion-text>
           </ion-card-content>
         </ion-card>
       </ion-col>
-      <ion-col>
+      <ion-col [size]="platform.width()>620?(selectedValue==='beispiel'?12:6):12">
         <ion-card (click)="changeSelectedValue('beispiel')">
           <ion-card-title>Beispiele</ion-card-title>
           <ion-card-content *ngIf="selectedValue==='beispiel'">
-            Wieso nennt es sich Sleeper Effect?
-            Der Sleeper Effect hat nicht so wie es der Begriff scheinen lässt, etwas mit schlafen zu tun, sondern mit einer Einstellungsänderung über eine längere Zeitspanne.
-
-            Was ist Sleeper-Effect?
-            Der Sleeper Effect bezieht sich auf das Verändern oder Vergessen der Gefühlseinstellung, bezüglich der Quelle oder Senders der Informationen. Man vergisst die Glaubwürdigkeit oder Unglaubwüdikeit des Senders und validiert die erhaltene Information über Zeit neu. So kann es sein, dass die ehemals negative Wirkung des Informationssender vergessen geht, jedoch die Erinnerung an den Inhalt bleibt, welcher je länger es her ist, umso glaubwürdiger wirkt.
-
-            Damit der Sleeper Effect zustande kommen kann, müssen deshalb folgende Randbedingungen herrschen:
+            <ion-text>
+              <h1>In der Wirtschaft</h1>
+              <ion-grid>
+                <ion-row>
+                  <ion-col>
+                    <img src="assets/svg/undraw_finance_0bdk.svg" alt="finance">
+                    </ion-col>
+                  <ion-col>
+                    Der Sleeper Effekt ist einer der wichtigsten Manipulation Taktiken und Gründe dafür, wieso z.B die “nervige” Werbung, welche wir tagtäglich, sei es online oder draussen auf Plakaten sehen, doch funktioniert.
+                    <br><br>
+                    So reden sich viele von uns ein, niemals von Werbung sich beeinflussen zu lassen, und doch wird das Shampoo gekauft, welches wir vor 4 Wochen in einer Youtube-Ad gesehen haben.
+                    <br><br>
+                    Die Werbung zählt eher darauf ihre Produkte “verführerisch” zu präsentieren anstatt glaubhaft rüber zu kommen.
+                    <br><br>
+                    Es ist zwar für die meisten Unternehmungen wichtig ein gutes Image zu haben, aber in Wahrheit bleibt das vertrauenswürdige Image für den Konsumenten nicht gleich, sondern wird immer unwichtiger. So könnte ein Unternehmen extrem unglaubwürdig sein, und durch gute Werbung trotzdem viele Produkte verkaufen, da der Käufer durch den Sleeper Effect manipuliert wird und im Laufe der Zeit, dem Unternehmen keine grosse Bedeutung mehr zuschreibt
+                  </ion-col>
+                </ion-row>
+                </ion-grid>
+              <h1>In der Politik</h1>
+              <ion-grid>
+                <ion-row>
+                  <ion-col>
+                    Auch in der Politik findet der Sleeper-Effect seinen Nutzen. Ein Beispiel ist da die US-Präsidentschaftswahl 2016.
+                    <br><br>
+                    Die US-Geheimdienste kamen 2016 zu dem Schluss, dass Russland hinter den Bemühungen steckte, die US-Wahl gegen Hillary Clinton zu manipulieren, indem eine staatlich genehmigte Kampagne mit Cyber-Angriffen und gefälschten Nachrichten in den sozialen Medien platziert wurde.
+                    <br><br>
+                    Hier wurden die sozialen Medien ausgenutzt um den Sleeper-Effect bei den US-Bürgern auszunutzen.
+                    <br><br>
+                    <h1>In der Gesellschaft</h1>
+                    <br><br>
+                    Durch diesen Effekt können sehr viele Menschen auch von falschen Informationen überzeugt werden, wie es z.b bei Fake-News oder der Entstehung von Verschwörungstheorien oder Bildung von Sekten der Fall ist.
+                    <br><br>
+                    Es gibt momentan z.B auch sehr viele und immer mehr Menschen, die von, für die meisten “ unsinnigen”, Verschwörungstheorien überzeugt werden.
+                  </ion-col>
+                  <ion-col>
+                    <img src="assets/svg/undraw_voting_nvu7.svg" alt="vote">
+                  </ion-col>
+                </ion-row>
+              </ion-grid>
+              <ion-grid>
+                <ion-row>
+                  <ion-col>
+                    <img style="margin-left: auto;margin-right: auto;display: block;" src="assets/svg/undraw_social_distancing_2g0u.svg" alt="finance">
+                  </ion-col>
+                </ion-row>
+                <ion-row>
+                  <ion-col>
+                    <strong>Verschwörungstheorien</strong>
+                    <br><br>
+                    So haben einige Menschen die Ansicht dass die Erde eigentlich eine Scheibe ist und keine Kugel. Ein Junger Mann, stellte diese Behauptung 29.10.16 in einer bekannten TV-Sendung, da er die 'grösste Lüge der Menschheit' aufdecken wollte. Er verweiste unter anderem auf die Bibel, jedoch konnte er sich nicht näher dazu äussern warum man den Menschen diese Lüge auftischen sollte und wer genau dahinter steckt konnte er nicht beantworten. Trotz der fehlenden Begründung gibt es aber seither immer mehr sogenannte “Flat-Earthers”, welche zu 100% davon überzeugt ist, dass die  Wissenschaft falsch liege und die Erde in Wahrheit flach sei.
+                    <br><br>
+                    Solche falschen Informationen können durchaus auch gefährlich werden, sobald eine grössere Masse von Menschen von ihnen überzeugt sind. Die Mehrheit sollte zwar keine Wahrheit machen, jedoch sind Verschwörungstheoretiker je länger desto mehr von ihren Theorien überzeugt, und beeinflussen “nicht-gläubige” auch unterbewusst.
+                    <br><br>
+                    Ein aktuelles Thema welches viele Leute in Rage und sogar in Gefahr versetzt sind die momentanen Covid-19- Verschwörungstheorien in 2020 und Maskengegner, die sich auch durch “Beweise” nicht mehr direkt überzeugen lassen.
+                    <br><br>
+                    <strong>Sekten</strong>
+                    <br><br>
+                    Seit anbeginn der Zeit gibt es Sekten. Per Definition: “Eine Sekte ist eine soziale Gruppe, die sich durch ihre ungewöhnlichen religiösen, spirituellen oder philosophischen Überzeugungen oder durch ihr gemeinsames Interesse an einer bestimmten Persönlichkeit, einem bestimmten Objekt oder Ziel definiert.” - Was heisst das eigentlich und was haben Sekten mit dem Sleeper-Effect zu tun?
+                    <br><br>
+                    Nun ja: Eine Sekte ist nichts anderes als eine Gruppe von Menschen die sehr stark von etwas überzeugt ist, und sich durch diese Überzeugung definiert. Oftmals sind diese Überzeugungen ‘ungewöhnlich’, nicht der Mehrheit entsprechend oder schlichtweg extrem. Genau da wird dann unterschieden zwischen einer Sekte und einer normalen Gruppe. Nun fragt man sich, was denn eine Sekte mit dem Sleeper-Effect zu tun haben könnte. Nun ja, ganz einfach. Eine Sekte oder besser gesagt, einer Sekte deren Anführer, können den Sleeper-Effect raffiniert ausnutzen, um Mitglieder auf natürlicher weise zu rekrutieren. Sie können Nachrichten publizieren oder noch besser; andere damit Beauftragen Nachrichten zu publizieren, und das auf repetierender Basis. Diese Nachrichten (wenn sie den Bedingungen auf Seite 1 gerecht werden) können den Sleeper-Effect bei Menschen verursachen. Diese Menschen glauben nun an diese Nachricht und haben die Quelle vergessen, glauben also das sie selbst damit aufgekommen sind. Da braucht es nicht viel bis der gesagte Mensch sich auf die Suche nach anderen gleichdenkenden Menschen macht. Da der Mensch ein soziales Tier ist und sich nach Gesellschaft sehnt. Für eine Sekte ist es denkbar einfach sich jetzt einzumischen und den Menschen auf ihre Seite zu ziehen.
+                    <br><br>
+                    <strong>Social Media</strong>
+                    <br><br>
+                    Social Media verstärkt den Sleeper-Effect nur. Wir erinnern uns nur an sehr starke, markante aussagen und nicht mehr an die sehr zweifelhaften, unvertrauenswürdigen Quellen. Dieser Effekt kann zu einer Einstellungsänderung führen und dann glaubt man selbst an etwas was man sich eigentlich schwören könnte, hätte man früher nie geglaubt. Das kann sehr gefährlich sein, für allem für junge Menschen. Da sie ein verfälschtes Bild der Welt bekommen und sie eigentlich wissen das es nicht wahr ist, es wurde Ihnen jedoch durch Social Media durch und durch eingeflösst.
+                  </ion-col>
+                </ion-row>
+              </ion-grid>
+            </ion-text>
           </ion-card-content>
         </ion-card>
       </ion-col>
@@ -48,13 +226,63 @@
         <ion-card (click)="changeSelectedValue('PdM')">
           <ion-card-title>Psychologie der Manipulation</ion-card-title>
           <ion-card-content *ngIf="selectedValue==='PdM'">
-            Wieso nennt es sich Sleeper Effect?
-            Der Sleeper Effect hat nicht so wie es der Begriff scheinen lässt, etwas mit schlafen zu tun, sondern mit einer Einstellungsänderung über eine längere Zeitspanne.
+            <ion-text>
+            <ion-grid>
+              <ion-row>
+                <ion-col>
+            <h1>Psychologie der Manipulation</h1>
+            Auch wenn wir es nicht merken, werden wir tagtäglich gezielt manipuliert. Dies ist kein Wunder, wenn man bedenkt dass unser Unterbewusstsein bis 80.000 Informationen pro Sekunde aufnimmt, verarbeitet und speichert und somit 10.000 Mal schneller (und klüger) ist als unser bewusster Verstand.
+                  <br><br>
+            Nebst dem Sleeper Effect gibt noch sehr viele andere psychologische Phänomene, welche auch in der Wirtschaft relevant sind und ausgenutzt werden.
+            Um ein guter Wirtschaftler zu sein und Erfolg im Marketing zu haben sollten deswegen  folgenden psychologischen Begriffen vertraut sein:
+                </ion-col>
+                <ion-col>
+                  <img src="assets/svg/undraw_empty_cart_co35.svg" alt="finance">
+                </ion-col>
+              </ion-row>
+              <ion-row>
+                <ion-col>
+                  <h1>Andere ähnliche Effekte</h1>
+                  <br>
+                  <strong>Priming</strong>
+            Unter Priming-Effekt ( Bahnung/Vorbereitung ) versteht man das Verändern der Wahrnehmung durch eine Art “Vorbereitung”. Man wird also auf gewisse Inhalte “geprimt” indem man einem Reiz ausgesetzt wird und dieser den weiteren Reiz bestimmt ( wie eine Kettenreaktion).
+                  <br><br>
+                  <strong>Knappheit Effekt</strong>
 
-            Was ist Sleeper-Effect?
-            Der Sleeper Effect bezieht sich auf das Verändern oder Vergessen der Gefühlseinstellung, bezüglich der Quelle oder Senders der Informationen. Man vergisst die Glaubwürdigkeit oder Unglaubwüdikeit des Senders und validiert die erhaltene Information über Zeit neu. So kann es sein, dass die ehemals negative Wirkung des Informationssender vergessen geht, jedoch die Erinnerung an den Inhalt bleibt, welcher je länger es her ist, umso glaubwürdiger wirkt.
-
-            Damit der Sleeper Effect zustande kommen kann, müssen deshalb folgende Randbedingungen herrschen:
+            Wie der Begriff es schon verratet geht dieser Effekt darum ein Gefühl der Knappheit zu erzeugen. Dies wird sehr oft im online Marketing verwendet. Dieses Phänomen hat mit dem Prinzip von Angebot und Nachfrage zu tun: Je seltener etwas ist, desto wertvoller ist es.
+                  <br><br>
+                  <strong>Social Proof</strong>
+            Das Konzept des Social Proofs beruht sich auf dem “Ich auch” Effekt, nach dem wir Handlungen und Verhalten nachmachen, weil wir davon ausgehen dass es ein angemessenes Verhalten widerspiegelt.
+                  <br><br>
+            Der Social Proof ist eines der meist ausgenutzten psychologischen Phänomenen im Marketing.
+                  <br><br>
+            <strong>Lockvogel Effekt</strong>
+            Der Lockvogel / Decoy Effect wird im Marketing vor allem bei Preismodellen verwendet.
+            Es beschreibt das Phänomen einer stärkeren Bevorzugung eines Produktes aufgrund zweier bestimmter Produkte, hervorgerufen durch das Angebot eines dritten „asymmetrisch dominierten“ Produktes welches sich klar abhebt von den anderen zwei ( Decoy/ Lockvogel).
+            Aufgrund dieses Lockvogels entscheidet sich der klahr Käufer für das teurere Produkt.( In diesem Falle A)
+                  <br><br>
+            <strong>Ankereffekt</strong>
+            Dieser Effekt tritt dann auf, wenn wir mit neuen Informationen konfrontiert werden und benutzen diese unbewusst als Grenzwerte (Anker). Dabei können es sogar völlig irrelevante Informationen sein die unsere Entscheidungen und Urteile manipulieren.
+                  <br><br>
+                </ion-col>
+              </ion-row>
+              <ion-row>
+                <ion-col>
+                    <img src="assets/svg/undraw_web_search_eetr.svg" alt="finance">
+                </ion-col>
+              <ion-col>
+                  <h1>Vergleich mit dem Sleeper Effect</h1>
+            Der wohl grösste Unterschied der genannten psychologischen Verhaltensmustern zum Sleeper Effect ist, dass er nicht gleich ausgelöst werden kann, sonder erst über Zeit passiert und stärker wird.
+                  <br><br>
+            Zudem kommen im Verlaufe der Zeit nicht neue Sachen dazu welche zur Manipulation führen, sondern es fällt etwas weg ( Discounting Cue).
+                  <br><br>
+            Der Sleeper Effect beruht nur zu Beginn auf einer äußere Manipulation ( persuasive Botschaft). Durch das Vergessen der Discounting Cue manipulieren/ verändern wir unser Verhalten und Einstellung gegenüber den bekommenen Informationen selber.
+                  <br><br>
+            Der Effekt ist auch sehr “instabil”, sprich sobald einer der Randbedingungen nicht vorhanden ist, findet der Effekt nicht statt. Er kann zudem auch rückgängig gemacht werden indem z.b die betroffene Person von dem Discount Cue erinnert wird.
+                </ion-col>
+              </ion-row>
+            </ion-grid>
+            </ion-text>
           </ion-card-content>
         </ion-card>
       </ion-col>

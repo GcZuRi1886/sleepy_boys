@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import {Router} from '@angular/router';
+import {Platform} from '@ionic/angular';
 
 @Component({
   selector: 'app-subjects',
@@ -11,7 +13,7 @@ export class SubjectsPage implements OnInit {
 
   oldValue: any;
 
-  constructor() {
+  constructor(public platform: Platform,) {
     this.selectedValue = null;
   }
 
