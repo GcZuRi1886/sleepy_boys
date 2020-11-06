@@ -9,7 +9,7 @@ import {Platform} from '@ionic/angular';
 })
 export class SubjectsPage implements OnInit {
 
-  selectedValue: 'einleitung' | 'geschichte' | 'beispiel' | 'PdM';
+  selectedValue: 'about' | 'entdeckung' | 'G' | 'beispiel' | 'PdM';
 
   oldValue: any;
 

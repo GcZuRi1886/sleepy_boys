@@ -9,7 +9,7 @@ ion-card-header{
   margin: 0%;
   width: 100%;
   height: 100%;
-}
+}f
 
 .card-img{
   width: 100%;
@@ -19,8 +19,8 @@ ion-card-header{
 }
 
 ion-card:hover{
-  min-width: 100%;
   transition: all 250ms linear;
+  transform: scale(1.01);
   box-shadow: 10px 10px 10px rgba(#000000, .4);
   ion-card-header{
     //padding: 0%;

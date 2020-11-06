@@ -1,6 +1,26 @@
 <div style="padding-top: 200px"></div>
 <ion-content>
-  <div style="margin:auto; height: 100%">
-    <button>Start Quiz</button>
-  </div> 
+  <div class="main" style="margin:auto; height: 100%">
+    <button id="start" (click)="showQuestion = 1" *ngIf="showQuestion == 0">Start Quiz</button>
+    <div class="score" *ngIf="showQuestion != 0">
+      <p>Score: {{score}} </p>
+    </div>
+    <div class="questions" *ngFor="let question of questions">
+      <div class="question" *ngIf="question.questionId == showQuestion">
+        <p id="text">{{question.question}}</p>
+        <button id="true" (click)="awnserQuestionTrue(question.questionId)">Wahr</button>
+        <button id="false" (click)="awnserQuestionFalse(question.questionId)">Falsch</button>
+      </div>
+      <div class="answer" *ngIf="question.answerId == showQuestion">
+        <div id="textAnswer">
+          <h1>Falsch</h1>
+          <p>{{question.answerText}}</p>
+        </div>
+        <button id="next" (click)="showQuestion = showQuestion + .5">Weiter</button>
+      </div>
+    </div>
+    <div class="end" *ngIf="showQuestion == 14">
+      <p>hallo</p>
+    </div>
+  </div>
 </ion-content>
