@@ -2,14 +2,14 @@
 <ion-content>
   <div class="main" style="margin:auto; height: 100%">
     <button id="start" (click)="showQuestion = 1" *ngIf="showQuestion == 0">Start Quiz</button>
-    <div class="score" *ngIf="showQuestion != 0">
-      <p>Score: {{score}} </p>
-    </div>
     <div class="questions" *ngFor="let question of questions">
       <div class="question" *ngIf="question.questionId == showQuestion">
+        <div class="dots">
+          <span *ngFor="let answer of answers" [class]="answer===null?'dot':answer===true?'dot correct': 'dot wrong'"></span>
+        </div>
         <p id="text">{{question.question}}</p>
-        <button id="true" (click)="awnserQuestionTrue(question.questionId)">Wahr</button>
-        <button id="false" (click)="awnserQuestionFalse(question.questionId)">Falsch</button>
+        <button id="true" (click)="answerQuestion(question.questionId, true)">Wahr</button>
+        <button id="false" (click)="answerQuestion(question.questionId, false)">Falsch</button>
       </div>
       <div class="answer" *ngIf="question.answerId == showQuestion">
         <div id="textAnswer">
@@ -19,8 +19,22 @@
         <button id="next" (click)="showQuestion = showQuestion + .5">Weiter</button>
       </div>
     </div>
-    <div class="end" *ngIf="showQuestion == 14">
-      <p>hallo</p>
+    <div class="end" *ngIf="showQuestion == 14" [hidden] = "submitted">
+      <h1>Du hast {{correct}} Richtg und {{wrong}} flasch</h1>
+      <h1>Von wie vielen von deinen Anworten weisst du noch die Quelle?</h1>
+      <div class="slider">
+        <input type="range" min="0" max="{{correct}}" value="0" (input)="knownSources = $event.target.value" class="range blue" />
+        <p class="tooltiptext">{{knownSources}}</p>
+      </div>
+      <button id="submit" (click)="onSubmit()">Submit</button>
     </div>
+    <div class="auswertung" [hidden] = "!submitted">
+      <h1>Auswertung &Oslash;</h1>
+      <canvas baseChart
+          [data]="pieChartData"
+          [labels]="pieChartLabels"
+          [chartType]="pieChartType"></canvas>
+    </div>
+
   </div>
 </ion-content>

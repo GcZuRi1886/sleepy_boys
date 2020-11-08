@@ -1,5 +1,14 @@
 {
   "projects": {
     "default": "sleeper-effect"
+  },
+  "targets": {
+    "sleeper-effect": {
+      "hosting": {
+        "app": [
+          "sleeper-effect"
+        ]
+      }
+    }
   }
 }
